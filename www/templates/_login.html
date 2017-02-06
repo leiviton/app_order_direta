@@ -1,0 +1,37 @@
+<ion-view class="screensBackground" hide-nav-bar="true">
+    <ion-content on-swipe-right="Fechar()" padding="true">
+        <div>
+          <div style="overflow: hidden; width:100%; box-sizing: border-box; text-align:center; padding: 20px 10px 20px;">
+              <div style="float:left">
+                 
+              </div>
+              <div style="float: right; margin:4px auto 0; width:100px;">
+                 
+              </div>
+          </div>
+            <div style="width:100%; text-align:center; position: relative; text-align: center;">
+              <!--<i class="ico-close absolute" ng-click="Fechar()"></i>-->
+
+              <img class="relative" src="img/logo2.png" style="top: -40px; max-width:220px;" >
+            </div>
+            <form class="form-login relative content-wrapper-custom" name="frmLogin" novalidate>
+              <div class="form-group-ico form-group relative">
+                  <i class="icon absolute ion-person placeholder-icon positive"></i>
+                  <input class="form-control input-login" type="text" id="txtEmail" ng-model="user.username" placeholder="Seu usuário" ng-required="true" ng-minlength="6" style="color: #fff !important;"
+                         ng-class="{'assertive': $invalid,'': !$invalid}" onkeyup="somenteNumeros(this);"/>
+              </div>
+              <div class="form-group-ico form-group relative">
+                <i class="icon absolute ion-unlocked placeholder-icon positive"></i>
+                <input class="form-control input-login" type="password" id="txtPassword" ng-model="user.password" placeholder="Sua senha" ng-required="true" ng-minlength="6"/>
+              </div>
+              <div class="row">
+                  <div class="col text-center">
+                      <button ng-disabled="frmLogin.$invalid" class="button ion-unlocked button-block button-light button-outline button-ligth" ng-click="login()" > Entrar</button>                     
+                      <span style="display:block; margin-top: 10px; color:red;" ng-if="wrongCredentials">SEU LOGIN E/OU SENHA SÃO INVÁLIDOS. TENTE NOVAMENTE <a style="color:navy" ng-click="NewUser()" href="">ou cadastre-se</a></span>
+                  </div>
+              </div>
+            </form>            
+        </div>
+    </ion-content>
+   
+</ion-view>

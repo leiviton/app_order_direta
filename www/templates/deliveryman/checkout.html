@@ -1,0 +1,20 @@
+<ion-view>
+    <ion-nav-title>Equipe</ion-nav-title>
+    <div class="bar bar-subheader">
+        <button class="button button-icon ion-plus" ng-click="openListAuxiliares()"></button>
+        <h2 class="title">Essa é sua equipe</h2>
+        <button class="button button-icon ion-minus-circled" ng-click="showDelete = !showDelete"
+        ng-class="{'button-clear button-assertive': showDelete,'': !showDelete}"></button>
+    </div>
+    <ion-content class="padding has-subheader">
+        <ion-list show-delete="showDelete">
+            <ion-item ng-repeat="o in items">
+                <h2>{{ o.ENOME }}</h2>
+                <ion-delete-button class="ion ion-minus-circled" ng-click="removeItem($index)"></ion-delete-button>
+            </ion-item>
+        </ion-list>
+        <button type="button" class="button button-balanced button-full" ng-click="voltar()">
+            Voltar para ordem
+        </button>
+    </ion-content>
+</ion-view>

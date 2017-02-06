@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-nav-title>Veiculo: {{ veiculo.V_NOME }}</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title">Detalhes do Veiculo</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <ion-list>
+            <ion-item class="item item-avatar">
+                <img src="img/carro.png"/>
+                <h2 ng-if="veiculo != null">{{ veiculo.V_NOME }} - {{ veiculo.V_PLACA }}</h2>
+                <h2>KM Inicio: {{ kmInicial }}</h2><br/>
+            </ion-item>
+            <form name="serial">
+                <label class="item item-input">
+                    <span class="input-label">Digite KM:</span>
+                    <input type="number" placeholder="Digite Km" ng-model="kmInicial" ng-minlength="6" ng-maxlength="6" ng-required="true" autofocus>
+                </label>
+            </form>
+            <button type="button" class="button button-balanced button-full" ng-disabled="serial.$invalid" ng-click="saveKm(kmInicial)">
+                Salvar Km Inicio
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view>
+    <ion-nav-title>Veiculos</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title">Escolha seu veiculo</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <ion-list>
+            <ion-item ng-repeat="o in veiculos.items" ng-click="addItem(o)">
+                {{ o.V_NOME }} - {{ o.V_PLACA}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

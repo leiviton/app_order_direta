@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-nav-title>Principal</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-icon light ion-android-more-vertical" menu-toggle="left" ng-click="openPopover($event)"></button>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        <div class="col card">
+            <ion-item class="item-icon-left" ui-sref="deliveryman.order">
+                <i class="icon ion-settings"></i>Ordens pendentes
+                <span class="badge badge-assertive" ng-if="count > 0">{{count}}</span>
+
+            </ion-item>
+        </div>
+        <div class="col card">
+            <ion-item class="item-icon-left" ui-sref="deliveryman.notification">
+                <i class="icon ion-android-notifications-none"></i>Notificações
+                <span class="badge badge-assertive" ng-if="countNot > 0">{{countNot}}</span>
+            </ion-item>
+        </div>
+        <div class="col card">
+            <ion-item class="item-icon-left dark" ng-click="sincronizar()">
+                <i class="icon ion-loop"></i>Sincronizar  | {{ data }}<span class="badge badge-assertive" ng-if="countSinc > 0"> {{countSinc}}</span>
+            </ion-item>
+        </div>
+    </ion-content>
+    <script id="templates/popover.html" type="text/ng-template">
+        <ion-popover-view>
+            <ion-content>
+                <div class="list">
+                    <a class="item" ng-click="logout()">
+                        Sair
+                    </a>
+                </div>
+            </ion-content>
+        </ion-popover-view>
+    </script>
+</ion-view>

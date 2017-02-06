@@ -1,0 +1,54 @@
+<ion-view>
+    <ion-nav-title>Minhas Ordens</ion-nav-title>
+    <div class="bar bar-stable bar-subheader padding">
+        <h2 class="title" ng-click="">
+            Ver rota
+        </h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <div ng-if="items.length==0" class="list card item-text-wrap">
+            <p class="item-text-wrap">Não há ordens no momento</p>
+        </div>
+        <ion-list ng-if="items.length>0">
+            <ion-item ng-repeat="o in items"  ng-click="openOrderDetail(o,$index)">
+                <div class="row">
+                    <div class="col">
+                        <h2>{{o.data|limitTo: 10 | date: '   dd/MM/yyyy'}}</h2>
+                    </div>
+                    <div class="col text-right">
+                        # {{o.ordem}}
+                        <i class="energized ion ion-alert-circled" ng-if="o.prioridade=='ALTA'"></i>
+                        <i class="assertive ion ion-alert-circled" ng-if="o.prioridade=='CRITICO'"></i>
+                        <i class="clear ion-alert-circled" ng-if="o.prioridade=='NORMAL'"></i>
+                    </div>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2>Melhor horário: {{o.melhor_horario}}</h2>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2 style="">Cliente: {{o.cliente}}</h2>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2>Tipo: {{o.tipo}} </h2>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2>Servico: {{o.servico}}</h2>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2>{{o.endereco}}, {{o.bairro}} - {{o.cidade}} </h2>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <script id="templates/map.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Rota de Ordens</h1>
+                <button class="button button-clear button-icon ion ion-android-close" ng-click="fechar()"></button>
+            </ion-header-bar>
+            <div ng-gmaps-waypoints options="options" origin="origin" locations="locations" destination="destination" class="has-header">
+
+            </div>
+        </ion-modal-view>
+    </script>
+</ion-view>

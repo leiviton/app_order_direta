@@ -1,0 +1,27 @@
+<ion-view>
+    <ion-nav-title>Produto: {{ product.name }}</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title">Detalhes do produto</h2>
+    </div>
+    <ion-content class="has-subheader">
+        <div class="list">
+            <div class="item item-avatar">
+                <h2>{{product.name}}</h2>
+                Serial: {{product.serial}}<br/>
+            </div>
+            <form name="serial">
+                <label class="item item-input">
+                    <span class="input-label">Serial:</span>
+                    <input type="text" placeholder="Forneça o serial" ng-model="product.serial" ng-minlength="10" ng-required="true">
+                </label>
+            </form>
+            <button type="button" class="button button-assertive button-full" ng-disabled="serial.$invalid" ng-click="updateSerial()">
+                Salvar Serial
+            </button>
+            <div class="item item-body">
+                <h2>Descrição</h2>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

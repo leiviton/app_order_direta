@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-nav-title>Lendo Notificação</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title"> {{notification.title}}</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <ion-list>
+            <ion-item class="item item-text-wrap">
+                <h2>{{notification.message}}</h2>
+            </ion-item>
+        </ion-list>
+        <button class="button button-full button-balanced" ng-click="confirmar(notification,$index)">Confirmar Mensagem</button>
+    </ion-content>
+</ion-view>

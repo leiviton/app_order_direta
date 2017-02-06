@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-nav-title>Ordem Finalizada {{order.number_os_sise}}</ion-nav-title>
+    <div class="bar bar-balanced bar-subheader">
+        <h2 class="title">Produtos que você utilizou</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <ion-list>
+            <ion-item>
+                <div class="row">
+                    <div class="col text-left">
+                        <h2>Produto</h2>
+                    </div>
+                    <div class="col text-center">
+                        <h2>Serial</h2>
+                    </div>
+                    <div class="col text-right">
+                        Qtd
+                    </div>
+                </div>
+                <div class="row" ng-repeat="o in items">
+                    <div class="col text-left">
+                        <h2>{{ o.name }}</h2>
+                    </div>
+                    <div class="col text-center">
+                        <h2>{{ o.serial }}</h2>
+                    </div>
+                    <div class="col text-right">
+                        {{ o.qtd }}
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <button type="button" class="button button-royal button-full" ng-click="openListOrder()">
+            Minhas ordens
+        </button>
+    </ion-content>
+</ion-view>

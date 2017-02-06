@@ -1,0 +1,21 @@
+<ion-view class="loginBg" hide-nav-bar="true">
+  <ion-content class="has-header has-footer padding full-height text-center">
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col login">
+            <div class="app-logo">
+                <img src="img/logo.png" >
+                <h3 class="img">Direta</h3>  
+            </div> 
+            <div class="list list-inset removePM">
+              <form name="form">    
+                <label class="item item-input"><input type="text" ng-model="user.username" placeholder="Seu usuário" ng-required="true" ng-minlength="6"> </label>
+                <label class="item item-input"><input type="password" ng-model="user.password" placeholder="Sua senha" ng-required="true" ng-minlength="6"></label>
+              </form>
+            </div>
+            <div class="loginButton">
+                <button class="button ion-unlocked button-block button-balanced" ng-disabled="form.$invalid" ng-click="login()"> Login </button>
+            </div>
+      </div>
+  </div>
+  </ion-content>
+</ion-view>

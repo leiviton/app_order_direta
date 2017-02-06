@@ -1,0 +1,47 @@
+<ion-view>
+    <ion-nav-title>Dashboard</ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <div class="item item-divider"><h2 class="title"> Ordens Pendentes:</h2></div>
+            <div class="row">
+                <div class="col">
+                    <ion-item class="item-icon-left assertive">
+                        <i class="icon ion-stats-bars"></i>Crítica: {{mes}}
+                    </ion-item>
+                </div>
+                <div class="col">
+                    <ion-item class="item-icon-left energized">
+                        <i class="icon ion-stats-bars"></i>Alta: {{dia}}
+                    </ion-item>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <canvas id="doughnut" class="chart chart-pie"
+                            chart-data="data1" chart-labels="label" chart-colors="color" chart-options="options">
+                    </canvas>
+                </div>
+            </div>
+            <div class="item item-divider"><h2 class="title"> Ordens Finalizadas:</h2></div>
+            <div class="row">
+                <div class="col">
+                    <ion-item class="item-icon-left" ng-class="{'assertive': menor,'balanced': !menor}">
+                        <i class="icon ion-stats-bars"></i>Mês atual: {{mesI}}
+                    </ion-item>
+                </div>
+                <div class="col">
+                    <ion-item class="item-icon-left calm">
+                        <i class="icon ion-stats-bars"></i>No dia: {{diaI}}
+                    </ion-item>
+                </div>
+            </div>
+            <div class="card">
+               <div class="item item-text-wrap">
+                   <canvas id="doughnut2" class="chart chart-pie"
+                            chart-data="data" chart-labels="labels" chart-colors="colors" chart-options="options">
+                    </canvas>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

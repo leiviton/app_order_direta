@@ -1,0 +1,332 @@
+.platform-android .action-sheet-backdrop.active {
+    background-color: rgba(0, 0, 0, 0.1); }
+.platform-android .action-sheet {
+    align-content: center;
+    margin:auto;
+    max-width: 96vw;
+    border-radius: 5px;
+    /*margin: 0;*/
+    margin-bottom: 10px;}
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+    text-align: left;
+    /*border-color: #e2e2e2;*/
+    font-size: 16px;
+    color: inherit;}
+.platform-android .action-sheet .action-sheet-title {
+    font-size: 14px;
+    padding: 16px;
+    color: #666; }
+.platform-android .action-sheet .button {
+    border-color: #e2e2e2;
+    padding-left: 16px;
+    color: #104e89;
+}
+.platform-android .action-sheet .button.destructive {
+    color: red;
+}
+.platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+    background: #e8e8e8; }
+.platform-android .action-sheet-group {
+    /*margin: 0;*/
+    border-radius: 0;
+    background-color: #fafafa; }
+.platform-android .action-sheet-cancel {
+    display: none;
+}
+.platform-android .action-sheet-has-icons .button {
+    padding-left: 56px; }
+
+.popover.active{
+    top: 46px;
+    left: 6px;
+    margin-left: 0px;
+    opacity: 0.8;
+    height: 50px !important;
+    width: 80px !important;
+}
+
+@media (min-width: 361px) {
+    .signature{
+        width: 100%;
+        height: 200px;
+        border: 0.7px solid black;
+        align-content: center;
+    }
+    .aux {
+        margin-left: 290px !important;
+        margin-top: -45px !important;
+    }
+    .button-circle {
+        position: relative !important;
+        z-index: 999999 !important;
+
+        cursor: pointer !important;
+        text-align: center !important;
+        margin-top: 40% !important;
+        padding: 2px 2px !important;
+    }
+    .data{
+        margin-left: -11px !important;
+        margin-top: -20px !important;
+        font-size: 1.2em !important;
+    }
+
+    .conteudo{
+        margin-top: -10px !important;
+    }
+    .t{
+        font-size: 1.0em !important;
+    }
+    a.nounderline:link
+    {
+        font-size: 1.2em;
+    }
+    .equipe{
+        font-size: 1.1em !important;
+    }
+    .label{
+        font-size: 1.1em !important;
+        color: #000000 !important;
+        margin-top: -20px !important;
+    }
+
+    .visita{
+        font-size: 1.1em !important;
+    }
+
+}
+
+.servicos{
+    font-size: 12px !important;
+    font-weight: bold;
+    padding: -2px !important;
+    margin-top: -5px !important;
+}
+
+.signature{
+    width: 100%;
+    height: 180px;
+    border: 0.7px solid black;
+    align-content: center;
+}
+
+@media (max-width: 360px) {
+
+    .aux {
+          margin-left: 230px !important;
+          margin-top: -45px !important;
+      }
+    .aux2 {
+        margin-left: 230px !important;
+        margin-top: -35px !important;
+    }
+    .vei {
+        margin-left: 230px !important;
+        margin-top: -48px !important;
+    }
+
+
+    .button-circle {
+        position: relative !important;
+        z-index: 999999 !important;
+
+        cursor: pointer !important;
+        text-align: center !important;
+        padding: 2px 2px !important;
+    }
+
+    .data{
+        margin-left: -11px !important;
+        margin-top: -20px !important;
+    }
+    .t{
+        font-size: 1.0em !important;
+    }
+    .conteudo{
+        margin-top: -10px !important;
+    }
+    a.nounderline:link
+    {
+        font-size: 1.0em;
+    }
+    .equipe1{
+        font-size: 1.0em !important;
+        margin-top: -10px !important;
+    }
+    .equipe{
+        font-size: 1.0em !important;
+        margin-bottom: 50%;
+    }
+
+    .visita{
+        font-size: 1.0em !important;
+    }
+}
+
+.ex{
+    margin-left: 190px !important;
+    margin-top: 5px;
+
+}
+
+/**item*/
+.item2{
+    padding-bottom: 0 !important;
+    padding-top: 5px !important;
+}
+
+.item3{
+    padding-bottom: 0 !important;
+
+}
+.alerta{
+    margin-right: 11px !important;
+}
+
+.clear{
+    color: transparent !important;
+}
+
+input{
+    font-size: 1.2em !important;
+}
+
+.plan{
+    margin-left: -11px !important;
+    margin-top: -10px !important;
+    font-weight:bold !important;
+}
+.idplan{
+    margin-top: -10px !important;
+    font-weight:bold !important;
+}
+.tel{
+    margin-left: -11px !important;
+    margin-top: -9px !important;
+    font-weight:bold !important;
+}
+.tel2{
+    margin-top: -9px !important;
+    font-weight:bold !important;
+}
+.sol{
+    margin-top: -9px !important;
+    font-size: 1.2em !important;
+}
+.icone{
+    font-size: 3em !important;
+    color: #ff0000;
+    margin-top: -30px !important;
+}
+
+.link{
+    margin-top: -14px !important;
+    font-size: 1.8em !important;
+}
+
+.v{
+    font-size: 0.9em !important;
+    margin-top: -12px !important;
+}
+
+a.end:link{
+    margin-top: -20px !important;
+    color: #000 !important;
+
+}
+a.linkum:link, a.linkum:visited {
+    font-size: 1.1em !important;
+    margin-top: -2px !important;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.login{
+    margin-top: -26px !important;
+}
+
+/*popup*/
+
+/*popup override*/
+.popup-container
+{
+
+}
+
+.popup
+{
+    padding: 12px;
+    border-radius: 10px !important;
+}
+
+.popup-head
+{
+
+}
+
+.popup-title
+{
+    color: #575757;
+    font-size: 25px !important;
+    text-align: center;
+    font-weight: 600;
+    margin: 25px 0;
+    padding: 0;
+    line-height: 40px;
+}
+
+.popup-body
+{
+    color: #797979;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    float: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.popup-buttons .button
+{
+    background-color: #387ef5;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-border-radius: 4px;
+    border-radius: 5px !important;
+    margin: 26px 5px 0 5px;
+    cursor: pointer;
+}
+
+.button-default{
+    background-color: #ef473a !important;
+}
+
+.popup-buttons .button.activated
+{
+    background-color: #387ef5 !important;
+}
+
+/**toast**/
+
+.toast_section {
+    color: #FFF;
+    cursor: default;
+    border-radius: 0 !important;
+    font-size: 1.1em !important;
+    display: none;
+    opacity: 1;
+    padding: 15px 35px 15px 15px !important;
+    margin-bottom: 55px !important;
+    margin-top: 35px !important;
+    margin-left: 15px!important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 1.0);
+}

@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-nav-title>Ordens Iniciadas</ion-nav-title>
+
+    <ion-content class="padding has-header">
+        <ion-refresher pulling-text="Arraste para atualizar..." on-refresh="doRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="o in items" ng-click="openOrderDetail(o)" on-hold="showActionSheet(o)">
+                <div class="row">
+                    <div class="col">
+                        <h2>{{o.created_at.date|limitTo: 10 | date: '   dd/MM/yyyy'}}</h2>
+                    </div>
+                    <div class="col text-right">
+                        # {{o.id}}
+                    </div>
+                </div>
+                <div class="row">
+                    <p>{{o.client.data.address}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,183 @@
+<ion-view>
+    <ion-nav-title>Serviços</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title">Serviços Executados</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <div class="list">
+            <form>
+                <label class="item item-input">
+                    <span class="input-label">Sistema de alarme:</span>
+                    <input type="text" ng-model="servicos.S_ALA" autofocus="true" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Sensores:</span>
+                    <input type="text"  ng-model="servicos.S_SEN"style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Comunicação Alarme:</span>
+                    <input type="text"  ng-model="servicos.S_COM" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Monitoramento:</span>
+                    <input type="text"  ng-model="servicos.S_MON" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Baterias Alarme:</span>
+                    <input type="text"  ng-model="servicos.S_BAT" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Baterias sensores:</span>
+                    <input type="text" ng-model="servicos.S_BATS" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Sirene:</span>
+                    <input type="text"  ng-model="servicos.S_SIR" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Modulo Gprs:</span>
+                    <input type="text"  ng-model="servicos.S_MOD" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Disparo Falso:</span>
+                    <input type="text"  ng-model="servicos.S_DISP" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Senhas Alarme:</span>
+                    <input type="text"  ng-model="servicos.S_SENHA" autofocus="true" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Energia Alarme:</span>
+                    <input type="text"  ng-model="servicos.S_ENE" autofocus="true" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Cabos</span>
+                    <input type="text"  ng-model="servicos.S_CABO" autofocus="true" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Outros.Serv.Alarme</span>
+                    <input type="text"  ng-model="servicos.S_OUTA" autofocus="true" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Cameras</span>
+                    <input type="text"  ng-model="servicos.S_CAM" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Cameras sem video</span>
+                    <input type="text"  ng-model="servicos.S_GRAV" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Gravação de cameras</span>
+                    <input type="text" ng-model="servicos.S_ALA" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Acesso remoto cameras</span>
+                    <input type="text" ng-model="servicos.S_ACE" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Standealone</span>
+                    <input type="text" ng-model="servicos.S_STAND" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Cerca Elétrica</span>
+                    <input type="text" ng-model="servicos.S_CERCA" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Hastes Cerca</span>
+                    <input type="text" ng-model="servicos.S_HASTE" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Molas Cerca</span>
+                    <input type="text" ng-model="servicos.S_MOLA" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Fios Cerca</span>
+                    <input type="text" ng-model="servicos.S_FIO" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Internet Rádio</span>
+                    <input type="text" ng-model="servicos.S_RADIO" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Outros Internet Rádio</span>
+                    <input type="text" ng-model="servicos.S_RADIOO" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Internet Fibra</span>
+                    <input type="text" ng-model="servicos.S_FIBRA" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Outros Internet Fibra</span>
+                    <input type="text" ng-model="servicos.S_FIBRAO" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <input type="text"  ng-model="servicos.S_LBRA1" placeholder="Preencha">
+                    <input type="text"  ng-model="servicos.S_BRA1" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <input type="text"  ng-model="servicos.S_LBRA2" placeholder="Preencha">
+                    <input type="text"  ng-model="servicos.S_BRA2" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <input type="text"  ng-model="servicos.S_LBRA3" placeholder="Preencha">
+                    <input type="text"  ng-model="servicos.S_BRA3" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <input type="text"  ng-model="servicos.S_LBRA4" placeholder="Preencha">
+                    <input type="text"  ng-model="servicos.S_BRA4" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+                <label class="item item-input">
+                    <input type="text"  ng-model="servicos.S_LBRA5" placeholder="Preencha">
+                    <input type="text"  ng-model="servicos.S_BRA5" style="text-transform:uppercase;" onkeyup="somenteNumeros(this);" maxlength="5">
+                </label>
+            </form>
+                <button type="button" class="button button-balanced button-full" ng-click="salvarServicos(servicos)">
+                    Salvar e seguir
+                </button>
+             <label class="item item-input">
+                <span class="input-label"></span>
+                <input type="text" ng-disabled="true">
+            </label>
+            <label class="item item-input">
+                <span class="input-label"></span>
+            </label>
+
+        </div>
+    </ion-content>
+    <ion-pull-up-footer class="bar-positive">
+        <ion-pull-up-handle icon-expand="ion-chevron-up" icon-collapse="ion-chevron-down" style="border-radius: 25px 25px 0 0">
+        </ion-pull-up-handle>
+        <ion-pull-up-bar>
+            <h1 class="title" ion-pull-up-trigger>Legendas</h1>
+        </ion-pull-up-bar>
+        <ion-pull-up-content scroll="false">
+            <div class="list card">
+                <div class="item item-divider">Preencha os campos com as letras</div>
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="col">
+                                <p>A - Ajustar</p>
+                                <p>B - Cadastrar</p>
+                                <p>C - Configurar</p>
+                                <p>D - Desativar</p>
+                                <p>E - Instalar</p>
+                                <p>F - Outros Serviços</p>
+                                <p>G - Recuperar</p>
+                                <p>H - Revisar</p>
+                            </div>
+                            <div class="col">
+                                <p>I - Reparar</p>
+                                <p>J - Refazer</p>
+                                <p>L - Reconfigurar</p>
+                                <p>M - Reinstalar</p>
+                                <p>N - Retirar</p>
+                                <p>O - Substituir</p>
+                                <p>P - Testar</p>
+                                <p>Q - Treinar</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </ion-pull-up-content>
+    </ion-pull-up-footer>
+</ion-view>

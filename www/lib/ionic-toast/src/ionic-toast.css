@@ -1,0 +1,57 @@
+
+.ionic_toast {
+  z-index: 9999;
+  border-radius: 0;
+}
+
+.toast_section {
+  color: #FFF;
+  cursor: default;
+  font-size: 1em;
+  display: none;
+  opacity: 1;
+  padding: 15px 35px 15px 15px;
+  margin: 25px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+.ionic_toast_top {
+  top: 15px;
+}
+
+.ionic_toast_middle {
+  top: 40%;
+}
+
+.ionic_toast_bottom {
+  bottom: 15px;
+}
+
+.ionic_toast_close {
+  color: #CCCCCC;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.toast_close_icon {
+  position: relative;
+  top: 1px;
+}
+
+.ionic_toast_sticky .ionic_toast_close {
+  display: block;
+}
+
+.ionic_toast_close:active {
+
+}

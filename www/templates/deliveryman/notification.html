@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-nav-title>Notificações</ion-nav-title>
+    <ion-content padding="true" class="has-header">
+        <div class="list card item-text-wrap">
+            <ion-item ng-repeat="o in notification" class="item item-icon-left"
+                      ng-class="{'assertive': o.bit_read==0}" ng-click="openDetail(o)">
+                <i class="icon ion-android-alert"></i>
+                <h2>{{o.title}}</h2>
+            </ion-item>
+            <ion-item ng-if="exibir==null">
+                <h2>Não há mensagens para seu usuário</h2>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,525 @@
+<ion-view>
+    <ion-nav-title>Serviços</ion-nav-title>
+    <div class="bar bar-stable bar-subheader">
+        <h2 class="title">Serviços Executados</h2>
+    </div>
+    <ion-content class="padding has-subheader">
+        <div class="list">
+            <div class="row">
+                <div class="col">
+                    <button class="button button-clear button-positive" ng-click="openModal('S_RADIO')">
+                       <h5 class="positive">Internet Rádio <i class="assertive ion-android-done" ng-if="checked_sRadio==true"></i></h5>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-clear button-positive" ng-click="openModal('S_RADIOO')">
+                        <h5 class="positive">Outros Int.Rádio <i class="assertive ion-android-done" ng-if="checked_sRadioo==true"></i></h5>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-clear button-positive" ng-click="openModal('S_FIBRA')">
+                        <h5 class="positive">Internet Fibra <i class="assertive ion-android-done" ng-if="checked_sFibra==true"></i></h5>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-clear button-positive" ng-click="openModal('S_FIBRAO')">
+                        <h5 class="positive">Outros Int.Fibra <i class="assertive ion-android-done" ng-if="checked_sFibrao==true"></i></h5>
+                    </button>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_ALA')">
+                            <h5 class="positive">Sistema de Alarme <i class="assertive ion-android-done" ng-if="checked_sAla==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_SEN')">
+                            <h5 class="positive">Sensores <i class="assertive ion-android-done" ng-if="checked_sSen==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_COM')">
+                            <h5 class="positive">Comunicação alarme <i class="assertive ion-android-done" ng-if="checked_sCom==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_MON')">
+                            <h5 class="positive">Monitoramento <i class="assertive ion-android-done" ng-if="checked_sMon==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_BAT')">
+                            <h5 class="positive">Baterias Alarme <i class="assertive ion-android-done" ng-if="checked_sBat==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_BATS')">
+                            <h5 class="positive">Baterias Sensores <i class="assertive ion-android-done" ng-if="checked_sBats==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_SIR')">
+                            <h5 class="positive">Sirene <i class="assertive ion-android-done" ng-if="checked_sSir==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_MOD')">
+                            <h5 class="positive">Modulo GPRS <i class="assertive ion-android-done" ng-if="checked_sMod==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_DISP')">
+                            <h5 class="positive">Disparo Falso <i class="assertive ion-android-done" ng-if="checked_sDisp==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_SENHA')">
+                            <h5 class="positive">Senhas Alarme <i class="assertive ion-android-done" ng-if="checked_sSenha==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_ENE')">
+                            <h5 class="positive">Energia Alarme <i class="assertive ion-android-done" ng-if="checked_sEne==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_CABO')">
+                            <h5 class="positive">Cabos <i class="assertive ion-android-done" ng-if="checked_sCabo==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_OUTA')">
+                            <h5 class="positive">Outros Serv.Alarme <i class="assertive ion-android-done" ng-if="checked_sOuta==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_CAM')">
+                            <h5 class="positive">Cameras <i class="assertive ion-android-done" ng-if="checked_sCam==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_CAMV')">
+                            <h5 class="positive">Cameras Sem Fio <i class="assertive ion-android-done" ng-if="checked_sCamv==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_GRAV')">
+                            <h5 class="positive">Gravação CFTV <i class="assertive ion-android-done" ng-if="checked_sGrav==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_ACE')">
+                            <h5 class="positive">Remoto CFTV <i class="assertive ion-android-done" ng-if="checked_sAce==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_STAND')">
+                            <h5 class="positive">Standealone <i class="assertive ion-android-done" ng-if="checked_sStand==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_CERCA')">
+                            <h5 class="positive">Cerca Elétrica <i class="assertive ion-android-done" ng-if="checked_sCerca==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_HASTE')">
+                            <h5 class="positive">Hastes Cerca <i class="assertive ion-android-done" ng-if="checked_sHaste==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_MOLA')">
+                            <h5 class="positive">Molas Cerca <i class="assertive ion-android-done" ng-if="checked_sMola==true"></i></h5>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-clear button-positive" ng-click="openModal('S_FIO')">
+                            <h5 class="positive">Fios Cerca <i class="assertive ion-android-done" ng-if="checked_sFio==true"></i></h5>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <button type="button" class="button button-balanced button-full"
+                ng-show="checked_sAla == true || checked_sRadio == true || checked_sRadioo == true || checked_sFibra == true || checked_sFibrao == true
+                    || checked_sSen == true || checked_sCom == true || checked_sMon == true || checked_sBat == true || checked_sBats == true
+                    || checked_sSir == true || checked_sMod == true || checked_sDisp == true || checked_sSenha == true || checked_sEne == true
+                    || checked_sCabo == true || checked_sOuta == true || checked_sCam == true || checked_sCamv == true || checked_sGrav == true
+                    || checked_sAce == true || checked_sStand == true || checked_sCerca == true || checked_sHaste == true || checked_sMola == true
+                    || checked_sFio == true || checked_sBra1 == true || checked_sBra2 == true || checked_sBra3 == true || checked_sBra4 == true
+                    || checked_sBra5 == true"    ng-click="goToSignature()">
+            Finalizar ordem
+        </button>
+    </ion-content>
+    <script id="templates/modal.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Selecionar serviço</h1>
+            </ion-header-bar>
+            <ion-content class="padding">
+                    <div class="list">
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Ajustar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.ajustar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Cadastrar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.cadastrar">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>configurar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.configurar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Desativar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.desativar">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Instalar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.instalar">
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Outr.Serviço</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.oustrosServicos">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Recuperar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.recuperar" >
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Revisar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.revisar">
+                                    </label>
+                                </div>
+                            </div>
+                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Reparar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.reparar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Refazer</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.refazer">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Reconfigurar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.reconfigurar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Reinstalar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.reinstalar">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Retirar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.retirar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Substituir</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.substituir">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Testar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.testar">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="item item-checkbox">
+                                    <h4>Treinar</h4>
+                                    <label class="checkbox checkbox-balanced">
+                                        <input type="checkbox" checked="" ng-model="servico.treinar">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="button button-full button-balanced"
+                                ng-if="servico.ajustar==true || servico.cadastrar == true || servico.configurar==true
+                                || servico.desativar == true || servico.desativar == true || servico.instalar == true
+                                || servico.oustrosServicos == true || servico.recuperar == true || servico.revisar == true
+                                || servico.reparar == true || servico.refazer == true || servico.reconfigurar == true
+                                || servico.reinstalar == true || servico.retirar == true || servico.substituir == true
+                                || servico.testar == true || servico.treinar == true"
+                                        ng-click="createServico(servico)">Salvar</button>
+                        <button class="button button-full button-assertive" ng-click="fechar(servico)">Cancelar</button>
+                    </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+    <script id="templates/label.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Selecionar serviço</h1>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <div class="list">
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Ajustar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.ajustar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Cadastrar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.cadastrar">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>configurar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.configurar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Desativar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.desativar">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Instalar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.instalar">
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Outr.Serviço</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.oustrosServicos">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Recuperar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.recuperar" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Revisar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.revisar">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Reparar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.reparar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Refazer</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.refazer">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Reconfigurar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.reconfigurar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Reinstalar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.reinstalar">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Retirar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.retirar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Substituir</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.substituir">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Testar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.testar">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="item item-checkbox">
+                                <h4>Treinar</h4>
+                                <label class="checkbox checkbox-balanced">
+                                    <input type="checkbox" checked="" ng-model="servico.treinar">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button button-full button-balanced"
+                            ng-if="servico.ajustar==true || servico.cadastrar == true || servico.configurar==true
+                                || servico.desativar == true || servico.desativar == true || servico.instalar == true
+                                || servico.oustrosServicos == true || servico.recuperar == true || servico.revisar == true
+                                || servico.reparar == true || servico.refazer == true || servico.reconfigurar == true
+                                || servico.reinstalar == true || servico.retirar == true || servico.substituir == true
+                                || servico.testar == true || servico.treinar == true"
+                            ng-click="createServicoLabel(servico)">Salvar</button>
+                    <button class="button button-full button-assertive" ng-click="fecharLabel(servico)">Cancelar</button>
+                </div>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>
+
+<!--
+
+<div class="row">
+                <div class="item item-input-inset">
+                    <form name="ser">
+                        <label class="item-input-wrapper">
+                            <input type="text" placeholder="Serviço" ng-model="label" ng-required="true" ng-minlength="5">
+                        </label>
+                    </form>
+                    <button class="button button-positive button-small" ng-click="openModalLabel(label)" ng-disabled="ser.$invalid">Servicos</button>
+                </div>
+            </div>
+
+
+-->
