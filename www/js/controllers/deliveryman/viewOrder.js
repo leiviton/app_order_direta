@@ -102,7 +102,7 @@ angular.module('starter.controllers')
                             };
                             $cart.addVisitas(item);
                             $state.go('deliveryman.order');
-
+    
                         }, function(err) {
                             // error
                             $ionicLoading.hide();
