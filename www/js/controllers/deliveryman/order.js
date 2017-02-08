@@ -7,13 +7,6 @@ angular.module('starter.controllers')
 
             $scope.items = [];
 
-            $scope.options = {};
-
-            $scope.destination={};
-
-            $scope.origin = {};
-
-            $scope.locations = [];
 
             $ionicLoading.show({
                template: 'Carregando...'
@@ -32,30 +25,6 @@ angular.module('starter.controllers')
             }
 
             getOrders();
-
-            $ionicModal.fromTemplateUrl('templates/map.html', {
-                scope: $scope
-            }).then(function(modal) {
-                $scope.modal = modal;
-            });
-
-            $scope.openModal = function() {
-                $scope.options = {latitude:-21.306960,longitude: -46.718473};
-                $scope.origin = {latitude:-21.306960,longitude: -46.718473};
-                $scope.locations = [
-                    {latitude:-21.306960,longitude: -46.718473},
-                    {latitude:-21.298844,longitude: -46.715383},
-                    {latitude:-21.308280, longitude:-46.730188}
-                ];
-                $scope.destination = {latitude:-21.306960,longitude: -46.718473};
-                $scope.modal.show();
-            };
-
-            $scope.fechar = function () {
-                  $scope.modal.hide();
-            };
-
-
 
             function distLatLong(lat1,lon1,lat2,lon2) {
                 var R = 6371; // raio da terra

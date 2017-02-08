@@ -19,7 +19,7 @@
                         # {{o.ordem}}
                         <i class="energized ion ion-alert-circled" ng-if="o.prioridade=='ALTA'"></i>
                         <i class="assertive ion ion-alert-circled" ng-if="o.prioridade=='CRITICO'"></i>
-                        <i class="clear ion-alert-circled" ng-if="o.prioridade=='NORMAL'"></i>
+                        <i class="clear ion-alert-circled" ng-if="o.prioridade=='NORMAL' || o.prioridade=='BAIXA' "></i>
                     </div>
                 </div>
                 <div class="row item-text-wrap">
@@ -40,15 +40,4 @@
             </ion-item>
         </ion-list>
     </ion-content>
-    <script id="templates/map.html" type="text/ng-template">
-        <ion-modal-view>
-            <ion-header-bar class="bar bar-header bar-positive">
-                <h1 class="title">Rota de Ordens</h1>
-                <button class="button button-clear button-icon ion ion-android-close" ng-click="fechar()"></button>
-            </ion-header-bar>
-            <div ng-gmaps-waypoints options="options" origin="origin" locations="locations" destination="destination" class="has-header">
-
-            </div>
-        </ion-modal-view>
-    </script>
 </ion-view>
