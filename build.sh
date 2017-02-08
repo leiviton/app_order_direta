@@ -1,4 +1,3 @@
 #!/bin/bash
 gulp
-cordova prepare
-cordova build $*
+ionic build $*
