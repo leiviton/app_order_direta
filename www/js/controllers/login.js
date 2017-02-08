@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
-    .controller('loginCtrl',['$scope','OAuth','OAuthToken','$ionicPopup','$state','UserData','$ionicLoading','$localStorage','$redirect','Sincronizar','User','$timeout',
-        function ($scope,OAuth,OAuthToken,$ionicPopup,$state,UserData,$ionicLoading,$localStorage,$redirect,Sincronizar,User,$timeout) {
+    .controller('loginCtrl',['$scope','UserData',
+        function ($scope,UserData) {
 
         $scope.user = {
             username: '',
