@@ -73,7 +73,7 @@ angular.module('starter.services')
                                     if (data.data.funciona.data.ATIVO == 'Sim') {
                                         if(data.data.primeiro_acesso==1) {
                                             $timeout(function () {
-                                                    $redirect.redirectSincronizar()
+                                                    $redirect.redirectSincronizar();
                                                 },
                                                 3000);
 

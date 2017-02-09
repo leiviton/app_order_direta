@@ -113,6 +113,11 @@ angular.module('starter', [
                 templateUrl:'templates/_login.html',
                 controller:'loginCtrl'
             })
+            .state('password',{
+                url:'/password',
+                templateUrl:'templates/password.html',
+                controller:'PasswordCtrl'
+            })
             .state('logout',{
                 url:'/logout',
                 controller:'logoutCtrl'

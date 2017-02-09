@@ -13,6 +13,10 @@ angular.module('starter.services')
                 method:'PATCH',
                 url:appConfig.baseUrl + '/api/device_token'
             },
+            updatePassword:{
+                method:'PATCH',
+                url:appConfig.baseUrl + '/api/new_password'
+            },
             notification:{
                 method:'GET',
                 url:appConfig.baseUrl + '/api/notification'
