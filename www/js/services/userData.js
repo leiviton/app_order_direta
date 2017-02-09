@@ -69,23 +69,31 @@ angular.module('starter.services')
                             .then(function (data) {
                                 $localStorage.setObject(key, data.data);
                                 Sincronizar.sincronizar();
-                                if(data.data.funciona.data.ATIVO=='Sim'){
-                                    $timeout(function () {
-                                            $redirect.redirectSincronizar()
-                                        },
-                                        3000);
 
-                                    $cordovaToast.show('Aplicativo atualizado', 'long', 'top');
-                                }else{
-                                    $cart.clearLogin();
-                                    $ionicHistory.clearCache();
-                                    $ionicHistory.clearHistory();
-                                    $ionicHistory.nextViewOptions({
-                                        disableBack: true,
-                                        historyRoot: true
-                                    });
-                                    $state.go('login');
-                                }
+                                    if (data.data.funciona.data.ATIVO == 'Sim') {
+                                        if(data.data.primeiro_acesso==1) {
+                                            $timeout(function () {
+                                                    $redirect.redirectSincronizar()
+                                                },
+                                                3000);
+
+                                            $cordovaToast.show('Aplicativo atualizado', 'long', 'top');
+                                        }else {
+                                            $state.go('password');
+                                            $cordovaToast.show('Seu primeiro acesso, favor trocar a senha', 'long', 'top');
+                                        }
+                                    }else {
+                                        $cart.clearLogin();
+                                        $ionicHistory.clearCache();
+                                        $ionicHistory.clearHistory();
+                                        $ionicHistory.nextViewOptions({
+                                            disableBack: true,
+                                            historyRoot: true
+                                        });
+                                        $state.go('login');
+                                        $cordovaToast.show('Usuário sem permissão', 'long', 'top');
+                                    }
+                                
 
                             }, function (responseError) {
                                     console.debug(responseError);

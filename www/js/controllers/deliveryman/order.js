@@ -7,7 +7,6 @@ angular.module('starter.controllers')
 
             $scope.items = [];
 
-            
             $ionicLoading.show({
                template: 'Carregando...'
             });
@@ -23,7 +22,9 @@ angular.module('starter.controllers')
                 $scope.items = $localStorage.getObject('orders').items;
                 $ionicLoading.hide();
             }
+
             getOrders();
+
 
             function distLatLong(lat1,lon1,lat2,lon2) {
                 var R = 6371; // raio da terra
