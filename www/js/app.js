@@ -115,7 +115,7 @@ angular.module('starter', [
             })
             .state('password',{
                 url:'/password',
-                templateUrl:'templates/password.html',
+                templateUrl:'templates/deliveryman/password.html',
                 controller:'PasswordCtrl'
             })
             .state('logout',{

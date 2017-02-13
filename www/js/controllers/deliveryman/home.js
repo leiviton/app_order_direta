@@ -48,5 +48,11 @@ angular.module('starter.controllers')
                 });
                 $cordovaToast.show('Obrigado volte sempre', 'long', 'top');
                 $state.go('welcome');
-            }
+            };
+
+            $scope.newPassword = function () {
+                $scope.popover.hide();
+
+                $state.go('password');
+            };
     }]);

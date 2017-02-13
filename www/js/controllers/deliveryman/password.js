@@ -10,11 +10,13 @@ angular.module('starter.controllers')
             };
 
             $scope.Salvar = function () {
-                User.updatePassword({new_senha:$scope.user.new_password})
-                    .then(function (data) {
+              var promise =  User.updatePassword({new_password:$scope.user.new_password}).$promise;
+                  promise.then(function (data) {
                         $scope.login.password = $scope.user.new_password;
                         $localStorage.setObject('login',$scope.login);
                         UserData.login($scope.login);
-                });
+                },function (error) {
+                      console.log(error);
+                  });
             }
     }]);

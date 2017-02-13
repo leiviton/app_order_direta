@@ -41,8 +41,8 @@
     left: 6px;
     margin-left: 0px;
     opacity: 0.8;
-    height: 50px !important;
-    width: 80px !important;
+    height: 150px !important;
+    width: 130px !important;
 }
 
 @media (min-width: 361px) {

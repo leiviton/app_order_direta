@@ -72,6 +72,7 @@ angular.module('starter.services')
 
                                     if (data.data.funciona.data.ATIVO == 'Sim') {
                                         if(data.data.primeiro_acesso==1) {
+                                            $ionicLoading.hide();
                                             $timeout(function () {
                                                     $redirect.redirectSincronizar();
                                                 },
@@ -79,6 +80,7 @@ angular.module('starter.services')
 
                                             $cordovaToast.show('Aplicativo atualizado', 'long', 'top');
                                         }else {
+                                            $ionicLoading.hide();
                                             $state.go('password');
                                             $cordovaToast.show('Seu primeiro acesso, favor trocar a senha', 'long', 'top');
                                         }
@@ -90,6 +92,7 @@ angular.module('starter.services')
                                             disableBack: true,
                                             historyRoot: true
                                         });
+                                        $ionicLoading.hide();
                                         $state.go('login');
                                         $cordovaToast.show('Usuário sem permissão', 'long', 'top');
                                     }
