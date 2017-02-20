@@ -1,9 +1,9 @@
 angular.module('starter.controllers')
     .controller('DeliverymanViewOrderCtrl',[
                   '$scope','$state','$stateParams','DeliverymanOrder','$ionicLoading',
-        '$cordovaGeolocation','$ionicPopup','$cart','$localStorage','$order','Sincronizar','$cordovaToast',
-        function ($scope,$state, $stateParams, DeliverymanOrder,$ionicLoading,
-                  $cordovaGeolocation,$ionicPopup,$cart,$localStorage,$order,Sincronizar,$cordovaToast) {
+        '$cordovaGeolocation','$ionicPopup','$cart','$localStorage','$order','Sincronizar','$cordovaToast','$cordovaLaunchNavigator'
+        ,function ($scope,$state, $stateParams, DeliverymanOrder,$ionicLoading,
+                  $cordovaGeolocation,$ionicPopup,$cart,$localStorage,$order,Sincronizar,$cordovaToast,$cordovaLaunchNavigator) {
         var item = [];
         $scope.order = [];
         $scope.equipe = [];
@@ -11,6 +11,9 @@ angular.module('starter.controllers')
         $scope.visitors = [];
         $scope.exibir = [];
         $scope.link = "https://google.com/maps/place/";
+        $scope.lat = '';
+        $scope.long = '';
+        $scope.endereco = '';
 
         $scope.veiculo = $localStorage.getObject('veiculo_order');
 
@@ -37,8 +40,8 @@ angular.module('starter.controllers')
                     order.bairro +', '+
                     order.cidade +' - '+
                     order.estado;
-                console.log('address',address);
-                $scope.link = "https://google.com/maps/place/"+address;
+                $scope.endereco = address;
+                createMarkerClient(address);
             }
 
             if ($scope.order.actions.data.length>0) {
@@ -205,4 +208,38 @@ angular.module('starter.controllers')
                     }
                 });
             };
+
+
+        function createMarkerClient(address) {
+            var urlIcon = 'http://maps.google.com/mapfiles/kml/pal2';
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                address: address
+            },function (results,status) {
+              console.log(results)
+                if (status == google.maps.GeocoderStatus.OK){
+
+                    $scope.lat = results[0].geometry.location.lat();
+                    $scope.long = results[0].geometry.location.lng();                    
+
+                }else{
+                    $scope.lat = -21.3071181;
+                    $scope.long = -46.7186155;
+                    $ionicPopup.alert({
+                        title:'Advertência',
+                        template:'Não foi possivel encontrar o endereço do cliente'
+                    });
+                }
+            })
+        }
+
+        //navivagate to target
+          $scope.navigateToTarget = function(){
+
+             var destino = [$scope.lat.toString(), $scope.long.toString()];// +'to:'+'-21.3071190,-46.7186160'+'to:'+'-21.3071195,-46.7186165';
+
+             $cordovaLaunchNavigator.navigate(destino);
+
+          }      
     }]);

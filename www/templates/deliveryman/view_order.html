@@ -18,10 +18,7 @@
 
                 <div class="conteudo">
                     <h2>Melhor horário:{{order.melhor_horario}}</h2>
-                    <a class="ion ion-ios-location linkum"
-                                       ng-href="{{link}}"
-                                       onclick='window.open(this.href, "_system", "location=yes"); return false;'>  {{order.endereco}}, {{order.bairro}} - {{order.cidade}}</a>
-
+                    <a class="ion ion-ios-location linkum" ng-click="navigateToTarget()">  {{order.endereco}}, {{order.bairro}} - {{order.cidade}}</a>
 
                     <div class="row">
                          <h2 class="col t text-left plan">Plano: {{order.plano}}</h2>
