@@ -4,6 +4,12 @@
         <button class="button button-clear button-icon light ion-android-more-vertical" menu-toggle="left" ng-click="openPopover($event)"></button>
     </ion-nav-buttons>
     <ion-content padding="true" class="has-header">
+        <div class="col card" ng-if="user.sup_monitor!=0">
+            <ion-item class="item-icon-left" ui-sref="deliveryman.attendance">
+                <i class="icon ion-settings"></i>Atendimentos pendentes
+                <span class="badge badge-assertive" ng-if="countAt > 0">{{countAt}}</span>
+            </ion-item>
+        </div>
         <div class="col card">
             <ion-item class="item-icon-left" ui-sref="deliveryman.order">
                 <i class="icon ion-settings"></i>Ordens pendentes

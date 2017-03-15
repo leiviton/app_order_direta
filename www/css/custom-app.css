@@ -43,6 +43,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 	background: linear-gradient(45deg, #225c9b 39%, #225c9b 100%);
 	color: #fff !important;
 }
+@media (max-width: 360px){
+  .screensBackgroundHome {
+    background: url('../img/banner360.jpg') no-repeat !important;
+    background: linear-gradient(45deg, #225c9b 39%, #225c9b 100%);
+    color: #fff !important;
+  }
+  .button-home{
+    margin-top: 450px;
+    margin-left: 113px;
+  }
+}
+@media (max-width: 414px){
+  .screensBackgroundHome {
+    background: url('../img/banner412.jpg') no-repeat !important;
+    background: linear-gradient(45deg, #225c9b 39%, #225c9b 100%);
+    color: #fff !important;
+  }
+  .button-home{
+    margin-top: 520px;
+    margin-left: 113px;
+  }
+}
+
+@media (max-width: 360px){
 .title-blue-default,.description-page{
 	color: #fff;
 }

@@ -36,31 +36,42 @@ angular.module('starter', [
                      ionic.Platform.exitApp();
                  })
              }else {
-                 if (window.Connection) {
-                     if (navigator.connection.type == Connection.NONE) {
-                         $ionicPopup.alert({
-                             title: "Sem conexão",
-                             content: "Seu smartphone está sem internet"
-                         }).then(function () {
-                             var login = $localStorage.getObject('login');
-                             if (login != null) {
-                                 $state.go('deliveryman.home');
-                             } else {
-                                 $state.go('login');
-                             }
-                         })
-                     } else {
-                         if (navigator.connection.type != Connection.NONE) {
-                             var login = $localStorage.getObject('login');
-                             console.log('login', login);
-                             if (login != null) {
-                                 UserData.login(login);
-                             } else {
-                                 $state.go('login');
+                if(ionic.Platform.isAndroid() || ionic.Platform.isIOS()){
+                     if (window.Connection) {
+                         if (navigator.connection.type == Connection.NONE) {
+                             $ionicPopup.alert({
+                                 title: "Sem conexão",
+                                 content: "Seu smartphone está sem internet"
+                             }).then(function () {
+                                 var login = $localStorage.getObject('login');
+                                 if (login != null) {
+                                     $state.go('deliveryman.home');
+                                 } else {
+                                     $state.go('login');
+                                 }
+                             })
+                         } else {
+                             if (navigator.connection.type != Connection.NONE) {
+                                 var login = $localStorage.getObject('login');
+                                 console.log('login', login);
+                                 if (login != null) {
+                                     UserData.login(login);
+                                 } else {
+                                     $state.go('login');
+                                 }
                              }
                          }
                      }
-                 }
+                }else{
+                    var login = $localStorage.getObject('login');
+                    console.log('login', login);
+                    if (login != null) {
+                              UserData.login(login);
+                    } else {
+                              $state.go('login');
+                    }
+
+                }
              }
 
 
@@ -72,7 +83,7 @@ angular.module('starter', [
                      console.log('usuario deslogado');
                  }
 
-             },60000);
+             },60000000);
 
             if(window.cordova && window.cordova.plugins.Keyboard) {
 

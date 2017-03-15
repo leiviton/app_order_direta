@@ -1,0 +1,27 @@
+<ion-view>
+    <ion-nav-title>Atender disparos</ion-nav-title>
+    <ion-content class="padding has-header">
+        <div ng-if="items.length==0" class="list card item-text-wrap">
+            <p class="item-text-wrap">Não há eventos no momento</p>
+        </div>
+        <ion-list ng-if="items.length>0">
+            <ion-item ng-repeat="o in items"  ng-click="openAttendanceDetail(o,$index)">
+                <div class="row">
+                    <div class="col">
+                        <h2>{{o.DATAHORA|limitTo: 10 | date: '   dd/MM/yyyy'}} - {{o.HORA}}</h2>
+                    </div>
+                    
+                </div>                
+                <div class="row item-text-wrap">
+                    <h2 style="">Cliente: {{o.CLIENTE}}</h2>
+                </div>                
+                <div class="row item-text-wrap">
+                    <h2>Descrição: {{o.DESC_EV}}</h2>
+                </div>
+                <div class="row item-text-wrap">
+                    <h2>{{o.endereco}}, {{o.bairro}} - {{o.cidade}} </h2>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

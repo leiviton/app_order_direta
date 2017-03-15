@@ -53,9 +53,19 @@ angular.module('starter.services')
                                             sinc_at: sinc,
                                             id_funcionario: id_funcionario
                                     },function (data) {
-                                            $localStorage.setObject('orders',{items:data.data});
+                                            if (data.data.length > 0) {
+                                                 $localStorage.setObject('orders',{items:data.data});
+                                             }else{
+                                                $localStorage.setObject('orders',{items:[]});
+                                             }
+                                           
                                             $cart.setQtd(data.data.length);
                                             $cart.clearClose();
+                                            DeliverymanOrder.getAttendance(function (data) {
+                                                if (data.data.length > 0) {
+                                                    $localStorage.setObject('attendance',{items:data.data});
+                                                }
+                                            })
                                             Auxiliary.query(function (data) {
                                                 $localStorage.setObject('auxiliary',{items:data.data});
                                             },function (error) {
@@ -113,9 +123,9 @@ angular.module('starter.services')
                     },
 
                     truncate: function () {
-                        var data = new Date();
+                         var data = new Date();
                          var mes = data.getMonth() + 1;
-                        return mes;
+                         return mes;
                     },
                     dataHojeSql: function () {
                         var data = new Date();

@@ -65,7 +65,11 @@ angular.module('starter.services')
         var key61 = 'S_LBRA5', S_LBRA5 = $localStorage.getObject(key61);
         var key62 = 'S_BRA5', S_BRA5 = $localStorage.getObject(key62);
         var key63 = 'truncate', truncate = $localStorage.get(key63);
+        var key64 = 'attendance', attendance = $localStorage.get(key64);
 
+        if (!attendance){
+            initAttendance();
+        }
         if (!truncate){
             initTruncate();
         }
@@ -913,6 +917,9 @@ angular.module('starter.services')
         }
 
         function initTruncate() {
-            $localStorage.set(key63,3);
+            $localStorage.set(key63,6);
+        }
+        function  initAttendance() {
+            $localStorage.set(key63,0);
         }
     }]);

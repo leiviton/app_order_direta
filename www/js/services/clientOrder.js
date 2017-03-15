@@ -50,6 +50,10 @@ angular.module('starter.services')
             getVeiculo:{
                 method: 'GET',
                 url: appConfig.baseUrl + '/api/deliveryman/veiculos'
+            },
+            getAttendance:{
+                method: 'GET',
+                url: appConfig.baseUrl + '/api/deliveryman/attendance'
             }
 
         });

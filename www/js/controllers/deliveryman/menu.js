@@ -10,7 +10,6 @@ angular.module('starter.controllers')
                 $cart.clearOrder();
                 $cart.clearClose();
                 $cart.clearLogin();
-
                 OAuthToken.removeToken();
                 $ionicHistory.clearCache();
                 $ionicHistory.clearHistory();

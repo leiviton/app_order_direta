@@ -7,6 +7,8 @@ angular.module('starter.controllers')
 
             var login = $localStorage.getObject('login');
 
+            $scope.user = UserData.get();
+
 
             $scope.sincronizar = function() {
                 if (window.Connection) {
@@ -36,9 +38,13 @@ angular.module('starter.controllers')
             $scope.countNot = $localStorage.getObject('notification').items.length;
             $scope.data = $localStorage.get('sincronizado');
             $scope.count = $localStorage.get('qtdOrder');
+            $scope.countAt = 0;
 
             $scope.logout = function () {
                 $scope.popover.hide();
+                $cart.clear();
+                $cart.clearOrder();
+                $cart.clearClose();
                 $cart.clearLogin();
                 $ionicHistory.clearCache();
                 $ionicHistory.clearHistory();

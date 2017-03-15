@@ -36,10 +36,7 @@ angular.module('starter.controllers')
 
             function initMarkes(order) {
                 var address = order.cep + ', ' +
-                    order.endereco +',' +
-                    order.bairro +', '+
-                    order.cidade +' - '+
-                    order.estado;
+                    order.endereco;
                 $scope.endereco = address;
                 createMarkerClient(address);
             }
@@ -238,6 +235,14 @@ angular.module('starter.controllers')
           $scope.navigateToTarget = function(){
 
              var destino = [$scope.lat.toString(), $scope.long.toString()];// +'to:'+'-21.3071190,-46.7186160'+'to:'+'-21.3071195,-46.7186165';
+
+             $cordovaLaunchNavigator.navigate(destino);
+
+          }      
+
+          $scope.navigateToTargetActions = function(action){
+
+             var destino = [action];// +'to:'+'-21.3071190,-46.7186160'+'to:'+'-21.3071195,-46.7186165';
 
              $cordovaLaunchNavigator.navigate(destino);
 
