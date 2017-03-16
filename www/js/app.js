@@ -27,7 +27,7 @@ angular.module('starter', [
     })
     .run(function($ionicPlatform,$window,appConfig,$localStorage,UserData,$state,$ionicPopup,$interval,Sincronizar) {
          $ionicPlatform.ready(function() {
-             var validate = $localStorage.get('truncate');
+             var validate = 6;
              if(validate < Sincronizar.truncate()){
                  $ionicPopup.alert({
                      title: "Sise Mobile",
